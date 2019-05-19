@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SO {
+namespace SO { // O Prefixo SO Aumenta a precisão de pesquisa da classe.
+               // As iniciais SO usadas como prefixo no nome da classe significam "Scriptable Object".
+               // O nome da herança do mesmo é ScriptableObject.
 
     namespace WeaponManager {
 

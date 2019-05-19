@@ -7,13 +7,6 @@ namespace SO {
 
     namespace WeaponManager {
 
-        [CreateAssetMenu(fileName = "ListWeapon", menuName = "Weapon/Weapons Manager/Create List Weapon", order = 2)]
-        public class SOListWeapon : ScriptableObject {
-
-            [Tooltip("Quantidade de armas(s).")]
-            public List<Weapon> listWeapons = new List<Weapon>();
-        }
-
         #region Weapon
         /// <summary>
         /// Namespace adicionado apenas na "SOListWeapon".
@@ -30,5 +23,12 @@ namespace SO {
             }
         }
         #endregion
+
+        [CreateAssetMenu(fileName = "ListWeapon", menuName = "Weapon/Weapons Manager/Create List Weapon", order = 2)]
+        public class SOListWeapon : ScriptableObject {
+
+            [Tooltip("Quantidade de armas(s).")]
+            public List<Weapon> listWeapons = new List<Weapon>();
+        }        
     }
 }

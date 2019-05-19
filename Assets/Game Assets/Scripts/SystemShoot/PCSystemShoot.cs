@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using SO.WeaponManager;
 
-[RequireComponent(typeof(WeaponManager))]
+[RequireComponent(typeof(WeaponManager))] // Adiciona obrigatoriamente um componente.
+
 // Classe partial é onde pode-se dividir o script em várias partes, SEM a necessidade de puxar referência.
-// Necessário que as classes partials tenham PARTIAL e que tenham o mesmo nome na classe.
+// Necessário que as classes partials tenham PARTIAL e que tenham o MESMO NOME na classe.
 // O Prefixo PC Aumenta a precisão de pesquisa da classe.
 // As iniciais PC usadas como prefixo no nome da classe significam "Partial Class".
 public partial class PCSystemShoot : MonoBehaviour {
@@ -32,7 +33,7 @@ public partial class PCSystemShoot : MonoBehaviour {
 
     #region Shoot
     /// <summary>
-    /// Atirar o projétil.
+    /// Atirar um projétil.
     /// </summary>
     public void Shoot() {
         for (byte i = 0; i < this.bagBullet.childCount; i++) {

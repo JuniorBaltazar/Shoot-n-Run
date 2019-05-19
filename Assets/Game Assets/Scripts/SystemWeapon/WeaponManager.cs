@@ -21,7 +21,7 @@ public class WeaponManager : MonoBehaviour {
     }
 
     private void Start() {
-        this.indexWeapon = 0; // Por default a arma utilizada é 0.
+        this.indexWeapon = 0; // Por default a primeira arma é utilizada.
         SOWeapon weapon = this.weapons.listWeapons[indexWeapon].weapon;
 
         this.CreateWeapon();
@@ -54,7 +54,7 @@ public class WeaponManager : MonoBehaviour {
         float mouseAxis =  Input.GetAxisRaw("Mouse ScrollWheel");
         int weaponsAmount = this.weapons.listWeapons.Count - 1;
 
-        #region Scroll
+        #region Mouse Scroll
         if (mouseAxis > 0) {
             if (this.indexWeapon == (byte) weaponsAmount)
                 this.indexWeapon = 0;

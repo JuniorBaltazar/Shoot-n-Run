@@ -1315,13 +1315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea50060807b30d45a4c3855e36e50ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platformManager: {fileID: 11400000, guid: 9c29a6995169bb944b910c74986df0f8, type: 2}
   platformBag: {fileID: 184079636}
-  platformPrefabList:
-  - {fileID: 5915460104485739163, guid: 567937ec3900c084d8c4686896fed9e0, type: 3}
-  - {fileID: 6676031630012363774, guid: 0d2ccac891773e64eb92eaa2648d9e76, type: 3}
-  - {fileID: 4952578353649931904, guid: deb029e3e9466a84ea3fbeaa19b18846, type: 3}
-  - {fileID: 764772566066439311, guid: 3e61ffc37217cdd47a905c8a0a178a0e, type: 3}
-  maxOffset: 0
 --- !u!1 &846010048
 GameObject:
   m_ObjectHideFlags: 0

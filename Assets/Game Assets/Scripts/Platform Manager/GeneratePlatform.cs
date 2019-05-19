@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SO.PlatformManager;
 
 public class GeneratePlatform : MonoBehaviour {
 
+    [SerializeField] private SO_PlatformManager platformManager = null;
     [SerializeField] private Transform platformBag = null;
-    [SerializeField] private List<GameObject> platformPrefabList = new List<GameObject>();
 
-    public float maxOffset = 0;
+    private float maxOffset = 0;
     private List<GameObject> platformList = new List<GameObject>();
 
     #region MonoBehaviour
@@ -27,8 +28,8 @@ public class GeneratePlatform : MonoBehaviour {
     /// Instancia as plataformas na cena.
     /// </summary>
     private void CreatePlatform () {
-        for (byte i = 0; i < this.platformPrefabList.Count; i++) {
-            GameObject platformObj = Instantiate(this.platformPrefabList[i], Vector3.zero, Quaternion.identity, this.platformBag);
+        for (byte i = 0; i < this.platformManager.platformPrefabList.Count; i++) {
+            GameObject platformObj = Instantiate(this.platformManager.platformPrefabList[i], Vector3.zero, Quaternion.identity, this.platformBag);
             platformObj.SetActive(true);
 
             this.platformList.Add(platformObj);
