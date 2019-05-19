@@ -16,10 +16,9 @@ public class Score : MonoBehaviour {
     private int maxPoints = 0;
 
     void Start() {
-        StartCoroutine(this.AddPointsInTime());
+        StartCoroutine(AddPointsInTime());
     }
 
-    #region Add Points
     void AddPoints() {
         this.maxPoints += this.amountPoints;
 
@@ -28,13 +27,10 @@ public class Score : MonoBehaviour {
 
         scoreText.text = "Score: " + this.maxPoints.ToString("0000");
     }
-    #endregion
 
-    #region IE Add Points In Time
     private IEnumerator AddPointsInTime () {
         this.AddPoints();
         yield return new WaitForSeconds(this.intervalAddPoints);
         StartCoroutine(AddPointsInTime());
     }
-    #endregion
 }
